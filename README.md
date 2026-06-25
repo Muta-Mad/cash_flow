@@ -18,13 +18,13 @@ cd cash_flow
 #### Linux / macOS
 ```bash
 python3 -m venv venv
-venv/bin/activate
+source venv/bin/activate
 ```
 
 #### Windows
 ```bash
 python -m venv venv
-source venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 ### 3. Установка зависимостей
@@ -33,9 +33,8 @@ source venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Создайте таблицы в базе данных SQLite на основе Django-моделей
-
 ### 4. Применение миграций
+Создайте таблицы в базе данных SQLite на основе Django-моделей
 
 #### Linux / macOS
 ```bash
