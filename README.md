@@ -72,17 +72,6 @@ python3 manage.py runserver
 ```bash
 python manage.py runserver
 ```
-### Загрузка тестовых данных (опционально)
-#### Linux / macOS
-```bash
-python3 manage.py loaddata cash_fixtures.json
-```
-
-#### Windows
-```bash
-python manage.py loaddata cash_fixtures.json
-```
-
 После этого проект будет доступен в вашем браузере по адресу:
 
 **http://127.0.0.1:8000/admin/**
