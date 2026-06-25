@@ -29,6 +29,10 @@ class CashFlowAdmin(admin.ModelAdmin):
         'category', 'subcategory', 'amount', 'comment_preview',
     )
     list_filter = ('date', 'status', 'transaction_type', 'category', 'subcategory')
+    
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        return queryset.select_related('status', 'transaction_type', 'category', 'subcategory')
 
     def comment_preview(self, obj):
         if not obj.comment:

@@ -1,0 +1,101 @@
+[
+  {
+    "model": "cash.status",
+    "pk": 1,
+    "fields": {
+      "name": "Бизнес"
+    }
+  },
+  {
+    "model": "cash.status",
+    "pk": 2,
+    "fields": {
+      "name": "Личное"
+    }
+  },
+  {
+    "model": "cash.status",
+    "pk": 3,
+    "fields": {
+      "name": "Налог"
+    }
+  },
+  {
+    "model": "cash.transactiontype",
+    "pk": 1,
+    "fields": {
+      "name": "Пополнение"
+    }
+  },
+  {
+    "model": "cash.transactiontype",
+    "pk": 2,
+    "fields": {
+      "name": "Списание"
+    }
+  },
+  {
+    "model": "cash.category",
+    "pk": 1,
+    "fields": {
+      "name": "Инфраструктура",
+      "transaction_type": 2
+    }
+  },
+  {
+    "model": "cash.category",
+    "pk": 2,
+    "fields": {
+      "name": "Маркетинг",
+      "transaction_type": 2
+    }
+  },
+  {
+    "model": "cash.category",
+    "pk": 3,
+    "fields": {
+      "name": "Доходы от услуг",
+      "transaction_type": 1
+    }
+  },
+  {
+    "model": "cash.subcategory",
+    "pk": 1,
+    "fields": {
+      "name": "VPS",
+      "category": 1
+    }
+  },
+  {
+    "model": "cash.subcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Proxy",
+      "category": 1
+    }
+  },
+  {
+    "model": "cash.subcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Farpost",
+      "category": 2
+    }
+  },
+  {
+    "model": "cash.subcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Avito",
+      "category": 2
+    }
+  },
+  {
+    "model": "cash.subcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Оплата по договору",
+      "category": 3
+    }
+  }
+]

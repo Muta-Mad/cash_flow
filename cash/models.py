@@ -1,7 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 from django.core.exceptions import ValidationError
-from django.utils import timezone as tz
 
 from cash.constants import DECIMAL_PLACES, MAX_DIGITS, MIN_AMOUNT, NAME_MAX_LEN
 
@@ -88,7 +87,6 @@ class CashFlow(models.Model):
     """Запись о движении денежных средств."""
     date = models.DateField(
         verbose_name='Дата',
-        default=tz.now,
     )
     status = models.ForeignKey(
         Status,

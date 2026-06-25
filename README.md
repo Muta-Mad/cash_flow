@@ -18,13 +18,13 @@ cd cash_flow
 #### Linux / macOS
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+venv/bin/activate
 ```
 
 #### Windows
 ```bash
 python -m venv venv
-venv\Scripts\activate
+source venv\Scripts\activate
 ```
 
 ### 3. Установка зависимостей
@@ -33,10 +33,15 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+Создайте таблицы в базе данных SQLite на основе Django-моделей
+
 ### 4. Применение миграций
 
-Создайте таблицы в базе данных SQLite на основе Django-моделей:
-
+#### Linux / macOS
+```bash
+python3 manage.py migrate
+```
+#### Windows
 ```bash
 python manage.py migrate
 ```
@@ -44,21 +49,40 @@ python manage.py migrate
 ### 5. Создание суперпользователя (администратора)
 
 Для доступа к интерфейсу управления записями и справочниками создайте аккаунт администратора:
+#### Linux / macOS
+```bash
+python3 manage.py createsuperuser
+```
+#### Windows
 
 ```bash
 python manage.py createsuperuser
 ```
 
-Вам будет предложено ввести логин, email и пароль.
+Вам будет предложено ввести username, email и пароль.
 
 ### 6. Запуск веб-сервиса
 
 Запустите локальный сервер разработки Django:
-
+#### Linux / macOS
+```bash
+python3 manage.py runserver
+```
+#### Windows
 ```bash
 python manage.py runserver
+```
+### Загрузка тестовых данных (опционально)
+#### Linux / macOS
+```bash
+python3 manage.py loaddata cash_fixtures.json
+```
+
+#### Windows
+```bash
+python manage.py loaddata cash_fixtures.json
 ```
 
 После этого проект будет доступен в вашем браузере по адресу:
 
-🌐 **http://127.0.0.1:8000/admin/**
+**http://127.0.0.1:8000/admin/**
